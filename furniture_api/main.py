@@ -53,3 +53,6 @@ def checkout(payload: CheckoutRequest):
         total += p["price"] * item.quantity
 
     return CheckoutResponse(orderId=str(uuid4()), total=total)
+
+
+## source .venv/scripts/activate uvicorn main:app --reload
